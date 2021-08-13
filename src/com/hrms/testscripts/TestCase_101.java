@@ -1,6 +1,9 @@
 package com.hrms.testscripts;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.Test;
+
+import com.hrms.pages.AssignLeave;
+import com.hrms.pages.LeaveList;
 import com.hrms.pages.Login_Page;
 import com.hrms.pages.LogoutPage;
 import com.hrms.pages.VerifyPage;
@@ -8,7 +11,7 @@ import com.hrms.utility.BaseClass;
 
 public class TestCase_101 {
 // Test case Steps
-	@Test(priority=2)
+	@Test(enabled=false)
 	public static void tc101() throws Exception{
 		DOMConfigurator.configure("log4j.xml");
 		BaseClass.openApplication();
@@ -25,6 +28,9 @@ public class TestCase_101 {
 		VerifyPage.verifyTitle("OrangeHRM");
 		Login_Page.login("Admin", "admin123");
 		VerifyPage.verifyTitle("Orange HRM");
+		LeaveList.Leave();
+		AssignLeave.Assign();
 		BaseClass.closeApplication();
+		
 	}
 }

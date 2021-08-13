@@ -5,7 +5,7 @@
     <classes>
       <class name="com.hrms.testscripts.TestCase_101">
         <methods>
-          <include name="tc101"/>
+          <include name="tc100"/>
         </methods>
       </class> <!-- com.hrms.testscripts.TestCase_101 -->
     </classes>
